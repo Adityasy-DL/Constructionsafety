@@ -17,3 +17,8 @@ dependencies = [
     "ultralytics>=8.4.173",
     "uvicorn[standard]>=0.54.0",
 ]
+
+[tool.uv.workspace]
+members = [
+    "backend",
+]
