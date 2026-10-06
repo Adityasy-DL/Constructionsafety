@@ -1,26 +1,7 @@
-import { useEffect, useState } from "react";
-
+import AIVision from "./pages/AIVision";
+import './index.css';
 function App() {
-  const [message, setMessage] = useState("Connecting...");
-
-  useEffect(() => {
-    fetch("http://127.0.0.1:8000/api/test")
-      .then((response) => response.json())
-      .then((data) => {
-        setMessage(data.message);
-      })
-      .catch((error) => {
-        console.error(error);
-        setMessage("Backend connection failed");
-      });
-  }, []);
-
-  return (
-    <div>
-      <h1>Hackathon project</h1>
-      <p>{message}</p>
-    </div>
-  );
+  return <AIVision />;
 }
 
 export default App;
